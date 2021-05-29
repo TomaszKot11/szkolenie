@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Adapter dla MySql
+gem 'mysql2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.11'
