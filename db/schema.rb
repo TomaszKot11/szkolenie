@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210529154513) do
+ActiveRecord::Schema.define(version: 20210529155738) do
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content", limit: 65535
+  end
 
   create_table "posts", force: :cascade do |t|
     t.text     "content",    limit: 65535
