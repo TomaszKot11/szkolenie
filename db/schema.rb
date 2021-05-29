@@ -11,11 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210529155738) do
+ActiveRecord::Schema.define(version: 20210529161608) do
 
   create_table "comments", force: :cascade do |t|
-    t.text "content", limit: 65535
+    t.text    "content", limit: 65535
+    t.integer "post_id", limit: 4
   end
+
+  add_index "comments", ["post_id"], name: "fk_rails_2fd19c0db7", using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.text     "content",    limit: 65535
@@ -23,4 +26,5 @@ ActiveRecord::Schema.define(version: 20210529155738) do
     t.datetime "updated_at"
   end
 
+  add_foreign_key "comments", "posts"
 end

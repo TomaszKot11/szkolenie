@@ -1,1 +1,3 @@
-class Post < ApplicationRecord; end
+class Post < ApplicationRecord
+    has_many :comments
+end
