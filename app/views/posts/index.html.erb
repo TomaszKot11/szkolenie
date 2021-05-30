@@ -6,5 +6,14 @@
     <hr/>
 <% end %>
 
+<strong>Tagi</strong>
+<br>
+<hr/>
+<hr/>
+<% @posts.includes(:tag).each do |post| %> 
+    <%= post.tag.name %>
+    <br>
+<% end %>
+
 <br>
 <%= link_to 'Stworz nowy post', new_post_path %>
