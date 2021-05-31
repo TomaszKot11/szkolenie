@@ -6,6 +6,8 @@ class Post < ApplicationRecord
 
     has_one :tag
 
+    validates :content, presence: true
+
     ## Scope example
     scope :by_updated_at, -> { order(:updated_at) }
     # default_scope -> Nie naduzybwać!

@@ -11,7 +11,7 @@
 <hr/>
 <hr/>
 <% @posts.includes(:tag).each do |post| %> 
-    <%= post.tag.name %>
+    <%= post.tag&.name %>
     <br>
 <% end %>
 
