@@ -1,0 +1,10 @@
+<%- @posts.each do |post|%>
+    <%= link_to post.content, post_path(post) %>
+    <%= link_to 'Edytuj', edit_post_path(post) %>
+    <%= link_to 'Delete', post_path(post), method: :delete, remote: :true %>
+    <br>
+    <hr/>
+<% end %>
+
+<br>
+<%= link_to 'Stworz nowy post', new_post_path %>
